@@ -182,10 +182,6 @@ button {
       padding-top: 8rem;
       padding-bottom: 10rem; } }
 
-@media (hover: hover) and (pointer: fine) {
-  a:hover {
-    color: red; } }
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -584,11 +580,10 @@ button {
     font-size: 1rem;
     color: #ddd;
     font-weight: 500;
-    margin-bottom: 1rem; }
+    margin-bottom: 2rem; }
     @media screen and (min-width: 48em) {
       .subscribe__subtitle {
-        font-size: 1.1rem;
-        margin-bottom: 2rem; } }
+        font-size: 1.1rem; } }
     @media screen and (min-width: 62em) {
       .subscribe__subtitle {
         font-size: 1.2rem;
@@ -596,10 +591,8 @@ button {
   .subscribe > h2 {
     color: #fcfcfc;
     max-width: 50rem;
-    margin-inline: auto; }
-    @media screen and (min-width: 48em) {
-      .subscribe > h2 {
-        margin-bottom: 3rem; } }
+    margin-inline: auto;
+    margin-bottom: 3rem; }
     @media screen and (min-width: 62em) {
       .subscribe > h2 {
         margin-bottom: 4rem; } }
@@ -608,11 +601,12 @@ button {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  max-width: 50rem;
+  max-width: 32rem;
   margin-inline: auto; }
   @media screen and (min-width: 36em) {
     .form {
-      flex-direction: row; } }
+      flex-direction: row;
+      max-width: 50rem; } }
   .form > div {
     display: flex; }
   .form__input {

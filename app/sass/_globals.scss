@@ -214,10 +214,3 @@ button {
     padding-bottom: 10rem;
   }
 }
-
-// REMOVE HOVER ON TOUCH DEVICES
-@media (hover: hover) and (pointer: fine) {
-  a:hover {
-    color: red;
-  }
-}
