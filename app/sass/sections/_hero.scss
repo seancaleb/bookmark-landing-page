@@ -1,0 +1,65 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  @include respond(md) {
+    flex-direction: row;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  & > div {
+    &:last-child {
+      @include respond(md) {
+        order: 1;
+        flex: 1;
+      }
+    }
+  }
+
+  &__img {
+    position: relative;
+    text-align: center;
+    @include respond(md) {
+      order: 2;
+      flex: 1;
+    }
+
+    & .rounded {
+      position: absolute;
+      top: 20%;
+      left: 20%;
+      right: 0;
+      width: 100vw;
+      height: 80%;
+      background-color: $soft-blue;
+      border-top-left-radius: 50rem;
+      border-bottom-left-radius: 50rem;
+      z-index: -1;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    @include respond(md) {
+      align-items: flex-start;
+    }
+
+    & > div {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      @include respond(lg) {
+        gap: 1.5rem;
+      }
+
+      & a {
+        @include respond(lg) {
+          padding: 1.3rem 3rem;
+        }
+      }
+    }
+  }
+}

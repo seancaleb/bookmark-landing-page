@@ -1,0 +1,40 @@
+/*
+$breakpoint argument choices
+- sm
+- md
+- lg
+- xl
+1em = 16px
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == sm {
+    @media screen and (min-width: 36em) {
+      @content; // 576px [Portrait Phones]
+    }
+  }
+
+  @if $breakpoint == max-md {
+    @media screen and (max-width: 47.9375em) {
+      @content; // 767px [Tablets]
+    }
+  }
+
+  @if $breakpoint == md {
+    @media screen and (min-width: 48em) {
+      @content; // 768px [Tablets]
+    }
+  }
+
+  @if $breakpoint == lg {
+    @media screen and (min-width: 62em) {
+      @content; // 992px [Laptops]
+    }
+  }
+
+  @if $breakpoint == xl {
+    @media screen and (min-width: 75em) {
+      @content; // 1200px [Large Devices]
+    }
+  }
+}

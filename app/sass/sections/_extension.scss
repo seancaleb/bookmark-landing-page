@@ -1,0 +1,72 @@
+.extension {
+  @include respond(lg) {
+    padding-bottom: 14rem;
+  }
+
+  & > .text {
+    margin-bottom: 4rem;
+    @include respond(md) {
+      margin-inline: auto;
+      text-align: center;
+      margin-bottom: 6rem;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    max-width: 90rem;
+    margin-inline: auto;
+    // grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-columns: minmax(30rem, 50rem);
+    justify-content: center;
+    gap: 6rem;
+
+    @include respond(md) {
+      grid-template-columns: repeat(2, minmax(30rem, 1fr));
+      gap: 2.5rem;
+    }
+
+    @include respond(lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+.card {
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.15);
+  padding: 0rem 4rem;
+  border-radius: 0.5rem;
+
+  @include respond(lg) {
+    &:nth-child(2) {
+      transform: translateY(4rem);
+    }
+
+    &:last-child {
+      transform: translateY(8rem);
+    }
+  }
+
+  & > div:last-child {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0 4rem;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 0 2rem;
+
+    & > div:first-child {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+  }
+  &__text {
+    color: $grayish-blue;
+  }
+}

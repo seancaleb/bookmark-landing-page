@@ -1,0 +1,86 @@
+.subscribe {
+  background-color: $soft-blue;
+  padding: 8rem 2rem;
+
+  &__subtitle {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 1rem;
+    color: #ddd;
+    font-weight: 500;
+    margin-bottom: 1rem;
+
+    @include respond(md) {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+    @include respond(lg) {
+      font-size: 1.2rem;
+      margin-bottom: 4rem;
+    }
+  }
+
+  & > h2 {
+    color: $white;
+    max-width: 50rem;
+    margin-inline: auto;
+
+    @include respond(md) {
+      margin-bottom: 3rem;
+    }
+    @include respond(lg) {
+      margin-bottom: 4rem;
+    }
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 50rem;
+  margin-inline: auto;
+
+  @include respond(sm) {
+    flex-direction: row;
+  }
+
+  & > div {
+    display: flex;
+  }
+
+  &__input {
+    padding: 1.3rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
+    color: rgba($v-dark-blue, 0.8);
+    @include respond(sm) {
+      flex: auto;
+    }
+
+    &::placeholder {
+      opacity: 0.75;
+    }
+  }
+
+  &__submit {
+    cursor: pointer;
+    padding: 1.3rem 3rem;
+    background-color: $soft-red;
+    color: $white;
+    border: 2px solid transparent;
+    flex: 1;
+    font-family: "Rubik", sans-serif;
+    @include respond(sm) {
+      flex: auto;
+    }
+
+    &:hover {
+      background-color: $white;
+      color: $soft-red;
+      border-color: $soft-red;
+      box-shadow: 0 0.4rem 8rem rgba(0, 0, 0, 0.15);
+    }
+  }
+}
