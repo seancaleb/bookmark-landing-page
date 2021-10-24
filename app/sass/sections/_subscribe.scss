@@ -49,12 +49,13 @@
   }
 
   &__input {
-    padding: 1.3rem 1rem;
+    padding: 1.5rem 1rem;
     border-radius: 0.5rem;
     font-size: 1.4rem;
     color: rgba($v-dark-blue, 0.8);
     @include respond(sm) {
       flex: auto;
+      padding: 1.3rem 1rem;
     }
 
     &::placeholder {

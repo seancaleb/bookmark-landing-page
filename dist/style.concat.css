@@ -611,13 +611,14 @@ button {
   .form > div {
     display: flex; }
   .form__input {
-    padding: 1.3rem 1rem;
+    padding: 1.5rem 1rem;
     border-radius: 0.5rem;
     font-size: 1.4rem;
     color: rgba(37, 43, 70, 0.8); }
     @media screen and (min-width: 36em) {
       .form__input {
-        flex: auto; } }
+        flex: auto;
+        padding: 1.3rem 1rem; } }
     .form__input::placeholder {
       opacity: 0.75; }
   .form__submit {
