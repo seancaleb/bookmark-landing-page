@@ -14,7 +14,8 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
   box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden; }
 
 body {
   font-size: 1.8rem;
